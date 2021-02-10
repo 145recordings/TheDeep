@@ -1,9 +1,8 @@
 import time
 import sys
+from thedeeptwo import choose1
 
-from thedeeptwo import *
 
-shoutBool = False
 
 print("Welcome to the Adventure")
 

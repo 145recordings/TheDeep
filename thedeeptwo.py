@@ -1,7 +1,8 @@
-from thedeepmain import *
 import time
 import sys
 
+
+x = 0
 
 def choose1():
     b = input("Enter the left door(1) inspect the painting(2) or enter the right door(3): ")
@@ -22,6 +23,12 @@ def choose1():
         choose1()
 #shoutBool resides here
 def choose2():
+    global x
+    x = x + 1
+    if x == 1:
+        global shoutBool
+        shoutBool = False
+
     bb = input("Continue looking(1) walk down the hallway(2) or shout at the people below(3) ?:")
     if bb == "1":
         print("You look on in horror and fascination.")
@@ -41,7 +48,7 @@ def choose2():
         choose2()
     elif bb == "2":
         print("")
-    elif bb == "3" and shoutBool = False:
+    elif bb == "3" and shoutBool == False:
         shout = input("What do you shout? ")
         shoutBool = True
         print(f"You take a deep breath and shout {shout}!")
@@ -64,7 +71,7 @@ def choose2():
         time.sleep(2)
         print("You hear a low rumble of scuffling for a few minutes until it stops.")
         choose2()
-    elif bb = "3" and shoutBool = True:
+    elif bb == "3" and shoutBool == True:
         print("They're all gone.")
         choose2()
 
